@@ -8,7 +8,7 @@ Some of the boilerplate code has been taken from the
 To run the project (make sure you have NodeJS installed)
 <pre>
 
-<code>	git clone https://github.com/jean-lucas/chatroom.git
+<code>	  git clone https://github.com/jean-lucas/chatroom.git
 	cd chatroom
 	npm install
 	npm start	
