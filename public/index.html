@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> chatroom</title>
+	</head>
+
+	<body>
+
+
+		<form >
+	    	<input type="text" id="inputMsg"  />
+	    	<input type="submit" />
+	    </form>
+
+
+
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"> </script>
+	<script src="http://code.jquery.com/jquery-1.11.1.js"> </script>
+
+	<script>
+
+		var socket = io();
+		$('form').submit(function(){
+
+		   socket.emit('test', $('#inputMsg').val());
+		   socket.emit('test2', $('#inputMsg').val().concat('2'));
+
+		   $('#inputMsg').val(''); //reset the input field to empty string
+
+		   return false;
+		 });
+
+
+
+	</script>
+	</body>
+
+</html>
