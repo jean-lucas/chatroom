@@ -9,11 +9,12 @@ app.get('/', function(req, res){
 io.on('connection', function(socket){
   socket.on('test', function(msg){
     console.log("new msg! ->  " + msg);
-  });
 
-  socket.on('test2', function(msg){
-    console.log("new msg! 2 ->  " + msg);
+    io.emit('test', msg);
   });
+  // socket.on('test2', function(msg){
+  //   console.log("new msg! 2 ->  " + msg);
+  // });
 });
 
 http.listen(3000, function(){
