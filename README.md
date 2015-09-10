@@ -10,6 +10,7 @@ To run the project (make sure you have NodeJS installed)
 <code>
 	git clone https://github.com/jean-lucas/chatroom.git
 	cd chatroom
+	npm install
 	npm start	
 </code></pre>
 
