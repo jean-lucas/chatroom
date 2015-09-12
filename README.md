@@ -1,9 +1,9 @@
-A chat room web app created with NodeJS and SocketIO <br><br>
+A chat room web app created with NodeJS and SocketIO <br>
 
 Some of the boilerplate code has been taken from the
 <a href="http://socket.io/get-started/chat/"> SocketIO - Get Started </a>
 
-<br><br>
+<br>
 
 To run the project (make sure you have NodeJS installed)
 <pre>
@@ -15,6 +15,6 @@ To run the project (make sure you have NodeJS installed)
 
 Now connect to http://localhost:3000/
 
-<br><br>
+<br>
 
 <strong> project NOT finished at the moment, but is functional </strong>
