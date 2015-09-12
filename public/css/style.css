@@ -1,0 +1,48 @@
+/*	$aqua_blue: #8fd2d1;
+	$yellow: #ffd256;
+	$red_pink: #ff5a5f;
+	$dark_blueGray: #253939;
+	$light_blueGray: #555c7c;
+	$bcg_gray: #e9e9e9;*/
+
+
+body {
+background-color: #e9e9e9;
+}
+#chatConnect {
+	position: relative;
+	width: 100%; 
+	height: 100%; 
+	text-align: center;
+}
+
+
+#chatContainer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;;
+}
+#chatContainer form {
+	position: relative; 
+	width: 100%; 
+	height: 100%; 
+	text-align: center
+}
+
+
+#outputMsg {
+	text-align: left;
+	padding: 1em 2em;
+
+	span {
+		 color:red; 
+		 padding-right: 30px;
+	}
+}
+
+#outputMsg span {
+	 color:red; 
+	 padding-right: 30px;
+}
+

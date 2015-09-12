@@ -16,16 +16,90 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-io.on('connection', function(socket){
-  socket.on('test', function(msg){
-    console.log("new msg! ->  " + msg);
 
-    io.emit('test', msg);
+
+
+
+
+io.on('connection', function(client) {
+
+
+	client.on('creatingRoom', function(response){
+
+		var greeting = {
+			msg: response.msg, 
+			user: response.username,
+			namespace: response.room,
+			status: 'success'
+		}
+    io.emit('test', greeting); //return back to client greeting
+
   });
-  // socket.on('test2', function(msg){
-  //   console.log("new msg! 2 ->  " + msg);
-  // });
 });
+
+
+
+
+
+/* not working.......  yet */
+// io.on('connection', function(client) {
+
+
+// 	client.on('creatingRoom', function(response){
+
+// 		var greeting = {
+// 			msg: response.msg, 
+// 			user: response.username,
+// 			namespace: response.room,
+// 			status: 'success'
+// 		}
+
+// 		connectToNamespace(greeting);
+
+//     // io.emit('test', greeting); //return back to client greeting
+//   });
+// });
+
+
+
+// function connectToNamespace(greeting) {
+
+// 	var nsp = io.of(greeting.namespace);
+
+// 	nsp.on('connection', function(client) {
+
+// 		console.log('hello ' + greeting.user + "  connected to: " + nsp.name);
+
+
+// 		client.sockets.emit('test', greeting);
+// 		client.on('debug', function(msg) {
+// 			console.log(msg);
+// 		});
+
+// 		// greeting.namespace.emit('test', greeting); //return back to client greeting
+// 	});
+
+
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 http.listen(3000, function(){
   console.log("Listening on port 3000");
