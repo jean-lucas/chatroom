@@ -14,3 +14,7 @@ To run the project (make sure you have NodeJS installed)
 </code></pre>
 
 Now connect to http://localhost:3000/
+
+<br><br>
+
+<strong> project NOT finished at the moment, but is functional </strong>
